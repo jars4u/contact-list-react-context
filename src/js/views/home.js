@@ -1,5 +1,7 @@
 import React from "react";
 import "../../styles/home.css";
+import { Link } from "react-router-dom";
+
 
 export const Home = () => {
 
@@ -7,7 +9,12 @@ export const Home = () => {
     <div className="container">
 
       <ul class="list-group border rounded-1">
-        <li className="d-flex justify-content-end"><button className="btn btn-success">Add new contact</button></li>
+        <li className="d-flex justify-content-end">
+          <Link to="/demo">
+            <button className="btn btn-success">Add new contact</button>
+          </Link>
+        </li>
+          
 
         {/* Contact card content (Boostrap)*/}
         <li class="list-group-item d-flex justify-content-between align-items-start">
