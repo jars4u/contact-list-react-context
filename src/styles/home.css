@@ -1,0 +1,19 @@
+body {
+    background-color: bisque;
+}
+
+img {
+    width: 100px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul i {
+    padding-inline: 10px;
+}
+
+button {
+    margin-bottom: 10px;
+}

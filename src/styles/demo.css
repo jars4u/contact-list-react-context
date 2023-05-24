@@ -1,0 +1,10 @@
+
+input {
+    padding-inline: 5px;
+    outline: none;
+    width: 100%;
+}
+
+input:placeholder-shown {
+    font-style: italic;
+}
