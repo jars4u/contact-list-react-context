@@ -43,9 +43,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			getAllContacts: async () => {
 				try {
-					let response = await fetch ('https://assets.breatheco.de/apis/fake/contact/agenda/jars_Agenda')
+					let response = await fetch('https://assets.breatheco.de/apis/fake/contact/agenda/jars_Agenda')
 					let data = await response.json()
-					console.log(response)
+
 					if (response.ok) {
 						setStore({
 							allContacts: data
@@ -53,11 +53,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 					} else {
 						console.log("Algo no esta bien")
 					}
-					
+
 				} catch (error) {
-					
+
 				}
-			
+
+			},
+			createContact: async (id) => {
+				try {
+					let response = await fetch('https://assets.breatheco.de/apis/fake/contact/agenda/jars_Agenda',
+						{
+							method: "POST",
+							body: JSON.stringify(data),
+							headers: {
+								'Content-Type': 'application/json'
+							}
+						})
+
+						if (response.ok) {
+							setStore({
+								allContacts: data
+							})
+						} else {
+							console.log("Algo no esta bien")
+						}
+
+				} catch (error) {
+
+				}
 			}
 		}
 	};
