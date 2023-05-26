@@ -14,6 +14,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			]
 		},
+
+		allContacts: [],
+
 		actions: {
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
@@ -37,6 +40,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			getAllContacts: async () => {
+				try {
+					let response = await fetch ('https://assets.breatheco.de/apis/fake/contact/agenda/jars_Agenda')
+					let data = await response.json()
+					console.log(response)
+					if (response.ok) {
+						setStore({
+							allContacts: data
+						})
+					} else {
+						console.log("Algo no esta bien")
+					}
+					
+				} catch (error) {
+					
+				}
+			
 			}
 		}
 	};
