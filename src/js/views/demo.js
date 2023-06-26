@@ -20,13 +20,13 @@ export const Demo = () => {
 				<li><input type="text" placeholder="Phone Number"></input></li>
 				<li>Address</li>
 				<li><input type="text" placeholder="Address"></input></li>
-			<br />
-			<Link to="/">
-				<div class="d-grid gap-2">
-					<button class="btn btn-primary" type="button">Save</button>
-				</div>
-				<a href="#" class="link-primary">or get back to Contacts</a>
-			</Link>
+				<br />
+				<Link to="/">
+					<div className="d-grid gap-2">
+						<button className="btn btn-primary" type="button">Save</button>
+					</div>
+					<a href="#" className="link-primary">or get back to Contacts</a>
+				</Link>
 			</ul>
 		</div>
 	);
